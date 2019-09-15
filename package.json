@@ -1,0 +1,23 @@
+{
+  "name": "scraping",
+  "version": "1.0.0",
+  "description": "Github scraping",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lfdantoni/scraping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lfdantoni/scraping/issues"
+  },
+  "homepage": "https://github.com/lfdantoni/scraping#readme",
+  "dependencies": {
+    "puppeteer": "^1.20.0"
+  }
+}
