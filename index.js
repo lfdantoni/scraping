@@ -10,9 +10,15 @@ const utils = require('./utils');
   await page.setViewport({ width: 1366, height: 768});
   await page.goto('https://github.com/GoogleChrome/puppeteer');
   
-  const issues = await page.$eval('.reponav a[href="/GoogleChrome/puppeteer/issues"] .Counter', el => el.textContent.trim());
-  const commits = await page.$eval('.numbers-summary .commits .num', el => el.textContent.trim());
-  const lastUpdate = await page.$eval('.commit-tease relative-time', el => el.getAttribute('datetime').trim());
+  const issues = await page.$eval(
+    '.reponav a[href="/GoogleChrome/puppeteer/issues"] .Counter',
+    el => el.textContent.trim());
+  const commits = await page.$eval(
+    '.numbers-summary .commits .num',
+    el => el.textContent.trim());
+  const lastUpdate = await page.$eval(
+    '.commit-tease relative-time',
+    el => el.getAttribute('datetime').trim());
 
   const data = {
       issues,
