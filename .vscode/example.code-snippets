@@ -1,0 +1,73 @@
+{
+	// Place your scraping workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"s1": {
+		"scope": "javascript,typescript",
+		"prefix": "s1",
+		"body": [
+			"const puppeteer = require('puppeteer');\n\n",
+		]
+	},
+	"s2": {
+		"scope": "javascript,typescript",
+		"prefix": "s2",
+		"body": [
+			"(async () => {\n\tconst browser = await puppeteer.launch({\n\t\theadless: false,\n\t\tdefaultViewport: null,\n\t\targs: [`--window-size=1980,1080`]\n\t});\n\t",
+		]
+	},
+	"s3": {
+		"scope": "javascript,typescript",
+		"prefix": "s3",
+		"body": [
+			"const page = await browser.newPage();\n",
+		]
+	},
+	"s4": {
+		"scope": "javascript,typescript",
+		"prefix": "s4",
+		"body": [
+			"await page.goto('https://www.rottentomatoes.com/browse/opening');\n\n",
+		]
+	},
+	"s5": {
+		"scope": "javascript,typescript",
+		"prefix": "s5",
+		"body": [
+			"const elements = await page.$$('.mb-movie');\n\n",
+		]
+	},
+	"s6": {
+		"scope": "javascript,typescript",
+		"prefix": "s6",
+		"body": [
+			"let i = 0;\nfor (const element of elements) {\n\ttry {\n\t\t$0\n\t\ti++;\n\t} catch (error) {\n\t\tconsole.log(error)\n\t}\n}\n\n",
+		]
+	},
+	"s7": {
+		"scope": "javascript,typescript",
+		"prefix": "s7",
+		"body": [
+			"const title = await element.\\$eval('.movieTitle', el => el.innerHTML);\n",
+		]
+	},
+	"s8": {
+		"scope": "javascript,typescript",
+		"prefix": "s8",
+		"body": [
+			"await element.screenshot({ path: `screenshots/\\${i}-\\${title.replace(/ /g, '_')}.png`, type: 'png' });\n",
+		]
+	},
+	"s9": {
+		"scope": "javascript,typescript",
+		"prefix": "s9",
+		"body": [
+			"await browser.close();",
+			"})();\n"
+		]
+	}
+}
